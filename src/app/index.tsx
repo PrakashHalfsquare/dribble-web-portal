@@ -16,6 +16,9 @@ import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
+import { Header } from 'app/components/Header';
+import { Footer } from 'app/components/Footer';
+
 export function App() {
   const { i18n } = useTranslation();
   return (
@@ -27,11 +30,12 @@ export function App() {
       >
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
-
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer />
       <GlobalStyle />
     </BrowserRouter>
   );

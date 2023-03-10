@@ -24,8 +24,14 @@ import { configureAppStore } from 'store/configureStore';
 
 import reportWebVitals from 'reportWebVitals';
 
+//Import Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // Initialize languages
 import './locales/i18n';
+
+//Import globle css
+import './styles/global.scss';
 
 const store = configureAppStore();
 const root = ReactDOM.createRoot(
